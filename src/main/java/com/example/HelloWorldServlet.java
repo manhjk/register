@@ -54,7 +54,7 @@ public class HelloWorldServlet extends HttpServlet {
 						.executeUpdate();
 			}
 
-			Test testReturned = conn.createQuery(select).executeAndFetchFirst(Test.class);
+			Test testReturned = conn.createQuery(select).addParameter("id", "pierwszy").executeAndFetchFirst(Test.class);
 			response.getOutputStream().print(testReturned.toString());
 		}
 	}

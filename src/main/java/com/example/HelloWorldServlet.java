@@ -36,11 +36,13 @@ public class HelloWorldServlet extends HttpServlet {
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-		MyConnection myConn = new MyConnection(DB_URL, 5432, DB_NAME, USER, PASS, SERVER, "herokuDB");
-
 		Sql2o sql2o = new Sql2o("jdbc:postgresql://" + SERVER + ":" + 5432 + "/" + DB_NAME, USER, PASS, new PostgresQuirks());
 
 		try (Connection conn = sql2o.open()) {
+			try (Connection con = sql2o.open()) {
+				con.createQuery("CREATE TABLE IF NOT EXISTS test (id char(20), date1 date);").executeUpdate();
+			}
+			
 			String select = "SELECT id, date1 FROM test WHERE id = :id";
 			List<Test> testResult = conn.createQuery(select).addParameter("id", "pierwszy").executeAndFetch(Test.class);
 
@@ -69,9 +71,7 @@ public class HelloWorldServlet extends HttpServlet {
 		MyConnection myConn = new MyConnection(DB_URL, 5432, DB_NAME, USER, PASS, SERVER, "herokuDB");
 		Sql2o sql2o = new Sql2o(myConn);
 
-		try (Connection con = sql2o.open()) {
-			con.createQuery("CREATE TABLE IF NOT EXISTS test (id char(20), date1 date);").executeUpdate();
-		}
+		
 	}
 
 	public static class Test {

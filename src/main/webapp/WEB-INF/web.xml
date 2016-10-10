@@ -1,13 +1,24 @@
-<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-     version="2.5">
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
 	<servlet>
 		<servlet-name>HelloWorldServlet</servlet-name>
-		<servlet-class>com.example.HelloWorldServlet</servlet-class>
+		<servlet-class>pl.org.odnowa.servlets.HelloWorldServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>HelloWorldServlet</servlet-name>
 		<url-pattern>/hello</url-pattern>
 	</servlet-mapping>
+	<context-param>
+		<param-name>dbUser</param-name>
+		<param-value>gmtrsxcockozea</param-value>
+	</context-param>
+	<context-param>
+		<param-name>dbPassword</param-name>
+		<param-value>IhMkxrbr1QKtSssCqmDY5i8-lb</param-value>
+	</context-param>
+	<context-param>
+		<param-name>dbURL</param-name>
+		<param-value>jdbc:postgresql://ec2-50-19-236-35.compute-1.amazonaws.com:5432/daonm67ig19ntt</param-value>
+	</context-param>
 </web-app>

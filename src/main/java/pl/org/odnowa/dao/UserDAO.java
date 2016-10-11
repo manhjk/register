@@ -13,8 +13,8 @@ public class UserDAO extends ObjectDAO {
 	public static User getObject(Connection conn, String id) {
 		User user = new User();
 
-		String select = String.format("SELECT %s FROM %s WHERE %s = :%s", "*",
-				user.getDBTableName(), user.getIdColumnName(), user.getIdColumnName());
+		String select = String.format("SELECT %s FROM %s WHERE %s = :%s", "*", user.getDBTableName(),
+				user.getIdColumnName(), user.getIdColumnName());
 
 		return conn.createQuery(select).addParameter(user.getIdColumnName(), id).executeAndFetchFirst(User.class);
 	}

@@ -33,8 +33,6 @@ public class LoginServlet extends HttpServlet {
 		htmlRespone += request.getParameter("your-community") + "<br/>";
 		htmlRespone += request.getParameter("warsztaty[]") + "<br/>";
 		htmlRespone += request.getParameter("skad1[]") + "<br/>";
-		htmlRespone += request.getParameter("skad2") + "<br/>";
-		htmlRespone += request.getParameter("your-notes") + "<br/>";	
 		htmlRespone += "</html>";
 		
 		// return response

@@ -7,11 +7,112 @@
 </head>
 <body>
 	<div align="center">
-	<form name="loginForm" method="post" action="loginServlet">
-		Username: <input type="text" name="username"/> <br/>
-		Password: <input type="password" name="password"/> <br/>
-		<input type="submit" value="Login" />
-	</form>
-	</div>
+	
+<p>
+	<strong>Formularz zgłoszeniowy</strong>
+</p>
+	
+<p>
+	<em><strong>Prosimy o uzupełnienie wszystkich pól przed wysłaniem formularza.</strong> Państwa dane osobowe zbierane są jedynie w celu wykupienia obowiązkowego ubezpieczenia Państwa pobytu w ośrodku.</em>
+</p>
+
+<div role="form" lang="pl-PL" dir="ltr">
+<form name="loginForm" method="post" action="loginServlet">
+<div style="display: none;">
+</div>
+
+<p>Imię i nazwisko (wymagane)<br />
+    <span>
+		<input type="text" name="your-name" value="" size="40" maxlength="30" minlength="5"/>
+	</span> 
+</p>
+	
+<p>Adres email (wymagane)<br />
+    <span>
+		<input type="email" name="your-email" value="" size="40" maxlength="30" minlength="5"/>
+	</span>
+</p>
+
+<p>Adres zamieszkania  (wymagane)<br />
+    <span>
+		<input type="text" name="your-address" value="" size="40"/>
+	</span>
+</p>
+
+<p>Pesel (wymagane)<br />
+    <span>
+		<input type="text" name="your-pesel" value="" size="40" maxlength="11" minlength="11"/>
+	</span>
+</p>
+
+<p>Telefon kontaktowy<br />
+    <span>
+		<input type="text" name="your-phone" value="" size="40" maxlength="15" minlength="9"/>
+	</span>
+</p>
+
+<p>Wasze odpowiedzi na poniższe pytania pozwolą nam sprofilować tegoroczne "149 godzin" do Waszych potrzeb.</p>
+
+<p>Jakie są Twoje oczekiwania?<br />
+    <span>
+		<textarea name="your-expectations" cols="40" rows="3"></textarea>
+	</span>
+</p>
+
+<p>Czy należysz do jakiejś wspólnoty albo ruchu religijnego?<br />
+    <span>
+		<textarea name="your-community" cols="40" rows="2"></textarea>
+	</span>
+</p>
+
+<p>W jakich warsztatach chciałbyś/chciałabyś uczestniczyć?<br />
+    <span>
+		<span>
+			<span>
+				<input type="checkbox" name="warsztaty[]" value="O pięknie kobiecości" />&nbsp;
+				<span>O pięknie kobiecości</span>
+			</span>
+			<span>
+				<input type="checkbox" name="warsztaty[]" value="Męskie ojcostwo" />&nbsp;
+				<span>Męskie ojcostwo</span>
+			</span>
+		</span>
+	</span>
+</p>
+
+<p>Skąd wiesz o 149 godzin?<br />
+    <span>
+		<span>
+			<span>
+				<input type="checkbox" name="skad1[]" value="Z polecenia (znajomi)" />&nbsp;
+				<span>Z polecenia (znajomi)</span>
+			</span>
+			<span>
+				<input type="checkbox" name="skad1[]" value="Wyszukiwarka internetowa" />&nbsp;
+				<span>Wyszukiwarka internetowa</span>
+			</span>
+		</span>
+	</span>
+	<br />
+	<span>
+		<textarea name="skad2" cols="40" rows="1"</textarea>
+	</span>
+</p>
+
+<p>Uwagi dodatkowe<br />
+    <span>
+		<textarea name="your-notes" cols="40" rows="3"></textarea>
+	</span>
+</p>
+
+<p>
+	<input type="submit" value="Wyślij"/>
+</p>
+
+</form>
+</div>
+<p>Po wypełnieniu formularza otrzymasz maila zwrotnego z dalszymi informacjami.</p>
+<p>Wypełniając niniejszy formularz wyrażasz zgodę na przetwarzanie Twoich danych osobowych zgodnie z Ustawą z dn. 29 sierpnia 1997 r. o ochronie danych osobowych (Dz. U. z 2014 r. poz. 1182). przez fundację Fundacja Exodus (ul. Smutna 5a, 41-200 Sosnowiec) celem organizacji wyjazdu.</p>
+
 </body>
 </html>

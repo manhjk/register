@@ -16,13 +16,6 @@ public class LoginServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		
-		// read form fields
-		String username = request.getParameter("username");
-		String password = request.getParameter("password");
-		
-		System.out.println("username: " + username);
-		System.out.println("password: " + password);
 
 		// do some processing here...
 		
@@ -30,9 +23,18 @@ public class LoginServlet extends HttpServlet {
 		PrintWriter writer = response.getWriter();
 		
 		// build HTML code
-		String htmlRespone = "<html>";
-		htmlRespone += "<h2>Your username is: " + username + "<br/>";		
-		htmlRespone += "Your password is: " + password + "</h2>";		
+		String htmlRespone = "<html><h2>";
+		htmlRespone += request.getParameter("your-name") + "<br/>";
+		htmlRespone += request.getParameter("your-email") + "<br/>";
+		htmlRespone += request.getParameter("your-address") + "<br/>";
+		htmlRespone += request.getParameter("your-pesel") + "<br/>";
+		htmlRespone += request.getParameter("your-phone") + "<br/>";
+		htmlRespone += request.getParameter("your-expectations") + "<br/>";
+		htmlRespone += request.getParameter("your-community") + "<br/>";
+		htmlRespone += request.getParameter("warsztaty[]") + "<br/>";
+		htmlRespone += request.getParameter("skad1[]") + "<br/>";
+		htmlRespone += request.getParameter("skad2") + "<br/>";
+		htmlRespone += request.getParameter("your-notes") + "<br/>";	
 		htmlRespone += "</html>";
 		
 		// return response

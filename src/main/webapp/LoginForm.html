@@ -21,33 +21,63 @@
 <div style="display: none;">
 </div>
 
-<p>Imię i nazwisko (wymagane)<br />
+<p>Imię<br />
     <span>
-		<input type="text" name="your-name" value="" size="40" maxlength="30" minlength="5"/>
+		<input type="text" name="firstName" value="" size="40" maxlength="30" minlength="5"/>
+	</span> 
+</p>
+
+<p>Nazwisko<br />
+    <span>
+		<input type="text" name="lastName" value="" size="40" maxlength="30" minlength="5"/>
 	</span> 
 </p>
 	
-<p>Adres email (wymagane)<br />
+<p>E-mail<br />
     <span>
-		<input type="email" name="your-email" value="" size="40" maxlength="30" minlength="5"/>
+		<input type="email" name="email" value="" size="40" maxlength="30" minlength="5"/>
 	</span>
 </p>
 
-<p>Adres zamieszkania  (wymagane)<br />
+<p>Ulica<br />
     <span>
-		<input type="text" name="your-address" value="" size="40"/>
+		<input type="text" name="street" value="" size="40"/>
 	</span>
 </p>
 
-<p>Pesel (wymagane)<br />
+<p>Numer domu<br />
     <span>
-		<input type="text" name="your-pesel" value="" size="40" maxlength="11" minlength="11"/>
+		<input type="text" name="houseNumber" value="" size="40"/>
+	</span>
+</p>
+
+<p>Numer mieszkania<br />
+    <span>
+		<input type="text" name="flatNumber" value="" size="40"/>
+	</span>
+</p>
+
+<p>Kod pocztowy<br />
+    <span>
+		<input type="text" name="postCode" value="" size="40"/>
+	</span>
+</p>
+
+<p>Miejscowość<br />
+    <span>
+		<input type="text" name="town" value="" size="40"/>
+	</span>
+</p>
+
+<p>Pesel<br />
+    <span>
+		<input type="text" name="pesel" value="" size="40" maxlength="11" minlength="11"/>
 	</span>
 </p>
 
 <p>Telefon kontaktowy<br />
     <span>
-		<input type="text" name="your-phone" value="" size="40" maxlength="15" minlength="9"/>
+		<input type="text" name="telephone" value="" size="40" maxlength="15" minlength="9"/>
 	</span>
 </p>
 
@@ -55,13 +85,13 @@
 
 <p>Jakie są Twoje oczekiwania?<br />
     <span>
-		<textarea name="your-expectations" cols="40" rows="3"></textarea>
+		<textarea name="expectations" cols="40" rows="3"></textarea>
 	</span>
 </p>
 
 <p>Czy należysz do jakiejś wspólnoty albo ruchu religijnego?<br />
     <span>
-		<textarea name="your-community" cols="40" rows="2"></textarea>
+		<textarea name="community" cols="40" rows="2"></textarea>
 	</span>
 </p>
 
@@ -69,11 +99,11 @@
     <span>
 		<span>
 			<span>
-				<input type="checkbox" name="warsztaty[]" value="O pięknie kobiecości" />&nbsp;
+				<input type="checkbox" name="conferences" value="O pięknie kobiecości" />&nbsp;
 				<span>O pięknie kobiecości</span>
 			</span>
 			<span>
-				<input type="checkbox" name="warsztaty[]" value="Męskie ojcostwo" />&nbsp;
+				<input type="checkbox" name="conferences" value="Męskie ojcostwo" />&nbsp;
 				<span>Męskie ojcostwo</span>
 			</span>
 		</span>
@@ -84,14 +114,23 @@
     <span>
 		<span>
 			<span>
-				<input type="checkbox" name="skad1[]" value="Z polecenia (znajomi)" />&nbsp;
+				<input type="checkbox" name="source1" value="Z polecenia (znajomi)" />&nbsp;
 				<span>Z polecenia (znajomi)</span>
 			</span>
 			<span>
-				<input type="checkbox" name="skad1[]" value="Wyszukiwarka internetowa" />&nbsp;
+				<input type="checkbox" name="source1" value="Wyszukiwarka internetowa" />&nbsp;
 				<span>Wyszukiwarka internetowa</span>
 			</span>
+			<span>
+				<textarea name="source2" cols="40" rows="1"></textarea>
+			</span>
 		</span>
+	</span>
+</p>
+
+<p>Uwagi dodatkowe<br />
+    <span>
+		<textarea name="notes" cols="40" rows="3"></textarea>
 	</span>
 </p>
 

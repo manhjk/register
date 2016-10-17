@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.sql2o.Connection;
+
 import pl.org.odnowa.dao.UserDAO;
 import pl.org.odnowa.db.DBConnectionManager;
 import pl.org.odnowa.model.User;
@@ -48,9 +50,9 @@ public class LoginServlet extends HttpServlet {
 		user.setNotes(request.getParameter("notes"));
 		user.setDate(new Date());
 
-		DBConnectionManager connectionMgr = (DBConnectionManager) request.getServletContext()
+		Connection connection = (Connection) request.getServletContext()
 				.getAttribute("DBConnection");
-		UserDAO.createUser(connectionMgr.getConnection(), user);
+		UserDAO.createUser(connection, user);
 
 		// build HTML code
 		String htmlRespone = "<html><h2>";

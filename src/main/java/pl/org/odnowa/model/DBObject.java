@@ -14,7 +14,7 @@ public abstract class DBObject implements Storable {
 		for (int i = 0; i < size; i++) {
 			sb.append(columnNames.get(i));
 
-			if (i > size - 1) {
+			if (i < size - 1) {
 				sb.append(", ");
 			}
 		}
@@ -32,7 +32,7 @@ public abstract class DBObject implements Storable {
 		for (int i = 0; i < size; i++) {
 			sb.append(":" + columnNames.get(i));
 
-			if (i > size - 1) {
+			if (i < size - 1) {
 				sb.append(", ");
 			}
 		}

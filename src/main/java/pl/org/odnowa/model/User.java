@@ -83,8 +83,8 @@ public class User extends DBObject {
 	}
 
 	@Override
-	public List<Object> getValues() {
-		List<Object> values = new ArrayList<>();
+	public List<String> getValues() {
+		List<String> values = new ArrayList<>();
 
 		values.add(id);
 		values.add(firstName);
@@ -99,12 +99,12 @@ public class User extends DBObject {
 		values.add(telephone);
 		values.add(expectations);
 		values.add(community);
-		values.add(conferences);
-		values.add(source1);
+		values.add(String.valueOf(conferences));
+		values.add(String.valueOf(source1));
 		values.add(source2);
 		values.add(notes);
-		values.add(date);
-		values.add(version);
+		values.add(String.valueOf(date));
+		values.add(String.valueOf(version));
 
 		return values;
 	}

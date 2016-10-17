@@ -12,7 +12,7 @@ public interface Storable {
 
 	public String getDBColumnParametersAsString();
 
-	public List<Object> getValues();
+	public List<String> getValues();
 
 	public String getIdColumnName();
 
